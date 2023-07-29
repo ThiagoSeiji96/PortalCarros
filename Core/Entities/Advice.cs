@@ -5,7 +5,7 @@ namespace Core.Entities
     public class Advice
     {
         public Advice(int id, string model, string brand, int year, string color,
-            VehicleTransmissionTypeEnum transmission, string hodomometer, int idUser, string description)
+            VehicleTransmissionTypeEnum transmission, string hodometer, int idUser, string description)
         {
             Id = id;
             Model = model;
@@ -13,7 +13,7 @@ namespace Core.Entities
             Year = year;
             Color = color;
             Transmission = transmission;
-            Hodometer = hodomometer;
+            Hodometer = hodometer;
             IdUser = idUser;
             CreatedAt = DateTime.Now;
             Status = true;
