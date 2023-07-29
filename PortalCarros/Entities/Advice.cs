@@ -4,6 +4,19 @@ namespace Core.Entities
 {
     public class Advice
     {
+        public Advice(int id, string model, string brand, int year, string color, VehicleTransmissionTypeEnum transmission, string hodomometer, int idUser)
+        {
+            Id = id;
+            Model = model;
+            Brand = brand;
+            Year = year;
+            Color = color;
+            Transmission = transmission;
+            Hodometer = hodomometer;
+            IdUser = idUser;
+            CreatedAt = DateTime.Now;
+        }
+
         public int Id { get; private set; }
         public string Model { get; private set; }
         public string Brand { get; private set; }
