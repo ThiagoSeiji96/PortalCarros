@@ -2,6 +2,7 @@
 using Application.Services.Interface;
 using Application.ViewModels;
 using Core.Entities;
+using Core.Enums;
 using Core.Repositories;
 
 namespace Application.Services
@@ -39,15 +40,18 @@ namespace Application.Services
         public async Task AddAdvice(AdviceInputModel model)
         {
             if (model == null) throw new Exception("Erro ao criar novo anúncio.");
+            
+            var modelBoolToInt = int.Parse(model.Transmission.ToString());
+
             var advice = new Advice(
                 model.Id,
                 model.Model,
                 model.Brand,
-                model.Year,
+                int.Parse(model.Year),
                 model.Color,
-                model.Transmission,
+                (VehicleTransmissionTypeEnum)modelBoolToInt,
                 model.Hodometer,
-                model.IdUser,
+                int.Parse(model.IdUser),
                 model.Description);
 
             await _AdviceRepository.AddAdvice(advice);

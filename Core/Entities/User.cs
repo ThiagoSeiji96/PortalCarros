@@ -16,6 +16,8 @@
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public int Telephone { get; set; }
+        public Address Address { get; set; }
         public DateTime BirthDate { get; set; }
         public DateTime CreatedAt { get; set; }
         public List<Advice> ListAdvices { get; set; }
