@@ -16,6 +16,11 @@ namespace Repository.Persistence.Configurations
                 .WithMany(a => a.ListAdvices)
                 .HasForeignKey(a => a.IdUser)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder
+                .HasOne(a => a.AdviceDetails)
+                .WithOne(a => a.Advice)
+                .OnDelete(DeleteBehavior.Restrict);
                 
         }
     }

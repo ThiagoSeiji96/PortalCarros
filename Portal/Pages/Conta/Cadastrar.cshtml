@@ -1,0 +1,72 @@
+﻿@page
+@model Application.InputModels.CreateUserInputModel
+@{
+    ViewBag.Title = "Cadastrar Usuário";
+}
+<div class="horizontal-layout page-header-light horizontal-menu 1-column register-bg blank-page" data-open="click" data-menu="horizontal-menu" data-col="1-column">
+    <div class="row center-align">
+        <div class="col s12">
+            <div class="container">
+                <div id="register-page" class="row">
+                    <div class="col l4"></div>
+                    <div class="col s12 m6 l4 z-depth-4 card-panel border-radius-6 register-card bg-opacity-8">
+                        <form method="post" class="login-form">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <h5 class="ml-4">Register</h5>
+                                    <p class="ml-4">Join to our community now !</p>
+                                </div>
+                            </div>
+                            @* <div class="form-group">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix pt-2">person_outline</i>
+                                    <input asp-for="Name" id="username" type="text">
+                                    <label asp-for="Name" for="username" class="center-align">Username</label>
+                                    <span asp-validation-for="Name"></span>
+                                </div>
+                            </div> *@
+                            <div class="row margin">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix pt-2">mail_outline</i>
+                                    <input asp-for="Email" id="email" type="email">
+                                    <label asp-for="Email" for="email" class="">Email</label>
+                                    <span asp-validation-for="Email"></span>
+                                </div>
+                            </div>
+                            <div class="row margin">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix pt-2">lock_outline</i>
+                                    <input asp-for="Password" id="password" type="password">
+                                    <label asp-for="Password" for="password">Password</label>
+                                    <span asp-validation-for="Password"></span>
+                                </div>
+                            </div>
+                            <div class="row margin">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix pt-2">lock_outline</i>
+                                    <input asp-for="ConfirmPassword" id="password-again" type="password">
+                                    <label asp-for="ConfirmPassword" for="password-again">Password again</label>
+                                    <span asp-validation-for="ConfirmPassword"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <button asp-controller="Account" asp-action="Register" class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12">Register</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <p class="margin medium-small center-align"><a href="user-login.html">Already have an account? Login</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col l4"></div>
+                </div>
+            </div>
+            <div class="content-overlay"></div>
+        </div>
+    </div>
+
+</div>

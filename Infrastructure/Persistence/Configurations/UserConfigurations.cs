@@ -15,6 +15,12 @@ namespace Repository.Persistence.Configurations
                 .WithOne(u => u.User)
                 .HasForeignKey(a => a.IdUser)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder
+                .HasOne(a => a.Address)
+                .WithOne(a => a.User)
+                .HasForeignKey<Address>(a => a.IdUser)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

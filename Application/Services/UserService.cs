@@ -15,7 +15,7 @@ namespace Application.Services
         }
         public async Task CreateAsync(CreateUserInputModel model)
         {
-            var user = new User(model.Id, model.Name, model.Email, model.Password, model.BirthDate);
+            var user = new User(model.Id, model.Name, model.Email, model.Password);
 
             await _userRepository.CreateAsync(user);
         }

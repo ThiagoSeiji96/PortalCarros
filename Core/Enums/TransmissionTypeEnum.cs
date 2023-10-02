@@ -2,7 +2,7 @@
 
 namespace Core.Enums
 {
-    public enum VehicleTransmissionTypeEnum
+    public enum TransmissionTypeEnum
     {
         [Display(Name = "Auto")]
         Auto = 0,

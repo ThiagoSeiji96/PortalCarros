@@ -2,13 +2,13 @@
 {
     public class User
     {
-        public User(int id, string name, string email, string password, DateTime birthDate)
+        public User(int id, string name, string email, string password)
         {
             Id = id;
             Name = name;
             Email = email;
             Password = password;
-            BirthDate = birthDate;
+            //BirthDate = birthDate;
             CreatedAt = DateTime.Now;
         }
 
